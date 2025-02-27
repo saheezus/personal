@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Typed from 'typed.js';
+import { use, useEffect, useRef } from 'react';
 
 function App() {
+
+  const element = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(element.current, {
+      strings: ["a computer science student", "a Washington native", "a software developer", "an avid skier"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Name">
+        <h1>I'm Sahi,</h1>
+      </div>
+      <div className="Description">
+        <span ref={element}></span>
+      </div>
     </div>
   );
 }
