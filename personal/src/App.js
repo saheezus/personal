@@ -4,9 +4,10 @@ import { use, useEffect, useRef } from 'react';
 
 function App() {
 
-  const element = useRef(null);
+  const typedDescriptions = useRef(null);
+  
   useEffect(() => {
-    const typed = new Typed(element.current, {
+    const typed = new Typed(typedDescriptions.current, {
       strings: ["a computer science student", "a Washington native", "a software developer", "an avid skier"],
       typeSpeed: 50,
       backSpeed: 50,
@@ -20,6 +21,8 @@ function App() {
 
   return (
     <div className="App">
+      <div className="Picture">
+      </div>
       <div className="Name">
         <h1>I'm Sahi,</h1>
       </div>
