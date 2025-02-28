@@ -4,11 +4,11 @@ import { use, useEffect, useRef } from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-center items-center p-5 bg-black text-white">
-      <span className="text-l hover:text-gray-400 transition-colors duration-300 mx-3">Me</span>
-      <span className="text-l hover:text-gray-400 transition-colors duration-300 mx-3">Projects</span>
-      <span className="text-l hover:text-gray-400 transition-colors duration-300 mx-3">Experience</span>
-  </nav>
+    <div className="fixed flex justify-center items-center p-5 bg-black text-white">
+      <span className="text-xl hover:text-gray-400 transition-colors duration-300 mx-3">Me</span>
+      <span className="text-xl hover:text-gray-400 transition-colors duration-300 mx-3">Projects</span>
+      <span className="text-xl hover:text-gray-400 transition-colors duration-300 mx-3">Experience</span>
+    </div>
   )
 }
 
@@ -30,16 +30,46 @@ const App = () => {
   }, []);
 
   return (
+    //  grid grid-cols-4 gap-4
     <div className="bg-black">
-      <Navbar />
-      {/* Main Content */}
-      <div className="bg-black text-white text-center h-screen flex flex-col justify-center">
-        <div className="">
+      <div className="fixed bg-black text-white h-screen p-7 justify-center items-left flex flex-col">
+        {/* <div className="p-5">
+          <span className="text-3xl font-bold hover:text-gray-400 transition-colors duration-300 mx-3">Sahi Chitrapu</span>
+        </div> */}
+        <div className="p-1">
+          <span className="text-l font-bold hover:text-gray-400 transition-colors duration-300 mx-3">Me</span>
         </div>
-        <div class="text-4xl">
+        <div className="p-1">
+          <span className="text-l font-bold hover:text-gray-400 transition-colors duration-300 mx-3">Projects</span>
+        </div>
+        <div className="p-1">
+          <span className="text-l font-bold hover:text-gray-400 transition-colors duration-300 mx-3">Experience</span>
+        </div>
+        <div className="p-3">
+          <img 
+            src={require("./img/github-logo.png")}
+            className="h-10 w-10"
+          />
+        </div>
+        <div className="p-3">
+          <img 
+            src={require("./img/linkedin-logo.png")}
+            className="h-10 w-11"
+          />
+        </div>
+      </div>
+      {/* Main Content */}
+      <div className="bg-black text-white justify-center items-center flex flex-col h-screen">
+        <div className="mx-auto justify-center p-4">
+          <img 
+            src={require("./img/me.jpeg")} 
+            className="rounded-lg h-48 w-48 object-cover" 
+          />
+        </div>
+        <div className="text-4xl items-center">
           <h1>I'm Sahi,</h1>
         </div>
-        <div className="text-xl">
+        <div className="text-xl items-center">
           <span ref={typedDescriptions}></span>
         </div>
         <div>
