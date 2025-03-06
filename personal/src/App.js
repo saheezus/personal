@@ -97,9 +97,24 @@ const App = () => {
       </div>
       <div className="text-white h-screen" style={{backgroundColor: bgColor}}>
       </div>
-      <div className="bg-white text-black h-screen">
-        <div className="bg-gray-100 p-4 h-screen text-center">
-          <h1 className="">Projects</h1>
+      <div className="bg-white text-black h-screen grid grid-cols-8">
+        <div className="bg-white h-screen text-center col-span-1">
+        </div>
+        <div className="bg-white h-full col-span-7">
+          <h1 className="font-bold text-4xl p-3">Projects</h1>
+          <div className="bg-white h-screen w-full shadow-lg p-3">
+            <span>Project 1</span>
+          </div>
+          <div className="bg-white h-screen w-full shadow-lg p-3">
+            <span>Project 2</span>
+          </div>
+          <h1 className="font-bold text-4xl p-3">Experience</h1>
+          <div className="bg-white h-screen w-full shadow-lg p-3">
+            <span>Experience 1</span>
+          </div>
+          <div className="bg-white h-screen w-full shadow-lg p-3">
+            <span>Experience 2</span>
+          </div>
         </div>
       </div>
     </div>
