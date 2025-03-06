@@ -52,8 +52,7 @@ const App = () => {
   }, [yPosition]);
 
   return (
-    <div className="text-white" style={{backgroundColor: bgColor}}>
-
+    <div style={{backgroundColor: bgColor}}>
       <div 
         className="fixed text-white h-screen p-7 justify-center items-left flex flex-col invisible md:visible" 
         style = {{backgroundColor: bgColor, color: yPosition <= window.innerHeight ? 'white' : 'black'}}
@@ -82,7 +81,7 @@ const App = () => {
       </div>
 
       {/* Main Content */}
-      <div className="justify-center items-center flex flex-col h-screen" style={{backgroundColor: bgColor}}>
+      <div className="justify-center items-center flex flex-col h-screen text-white" style={{backgroundColor: bgColor}}>
         <div className="mx-auto justify-center p-4">
           <img 
             src={require("./img/me.jpeg")} 
@@ -97,10 +96,11 @@ const App = () => {
         </div>
       </div>
       <div className="text-white h-screen" style={{backgroundColor: bgColor}}>
-
       </div>
       <div className="bg-white text-black h-screen">
-
+        <div className="bg-gray-100 p-4 h-screen text-center">
+          <h1 className="">Projects</h1>
+        </div>
       </div>
     </div>
   );
